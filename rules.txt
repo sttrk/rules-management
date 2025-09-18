@@ -5,7 +5,7 @@
   - 学習を開始する。  
   - 「🕐 hh:mm、◯◯を開始しました」と宣言。  
   - `#開始 タスク名` なら、そのタスクを指定して開始。  
-  - 入力時刻は **GitHub Raw URL**（`https://raw.githubusercontent.com/sttrk/jst-feed/main/jst.json`）から取得し、分単位で記録。  
+  - 入力時刻は **GitHub Raw URL**（`https://raw.githubusercontent.com/sttrk/jst-feed/main/rules.txt`）から取得し、分単位で記録。  
   - GitHubから取得できなかった場合は必ずユーザーに報告し、ユーザーが手動で入力した現在時刻を使用する。  
   - 時刻に誤りがあれば「◯時◯分に訂正」と指示すると上書きされる。  
 
@@ -72,7 +72,7 @@
 
 ## 6. 日付と時刻の基準
 - すべての時刻は以下のURLを基準にし、分単位で記録する：  
-  - **GitHub Raw URL** → `https://raw.githubusercontent.com/sttrk/jst-feed/main/jst.json`  
+  - **GitHub Raw URL** → `https://raw.githubusercontent.com/sttrk/jst-feed/main/rules.txt`  
   - GitHubから時刻を取得できなかった場合は、ユーザーの手動入力を基準とする。  
 
 ---
@@ -81,3 +81,13 @@
 -ルールの変更を行う際は、絶対にフォルダ内「rules.txt」を全文そのままチャットに出力し、それに対して **変更は👉、追加は✨、削除は❌** を文頭に付けて追記する。  
 必ず「変更を反映させたrules.txtを出力しますか？」と確認する。ユーザーが了承した時のみ、変更を反映させた最新版の 「rules.txt」をダウンロード出来るよう出力する。  
 -**絶対に「rules.txt」をファイル操作してはいけない。**  
+
+---
+
+## 8. メール出力時の件名フォーマット
+- ChatGPTがメールを出力する際は、件名に以下のタグを付けること：  
+  - **学習ログ:** `[Log] Daily YYYYMMDD` または `[Log] Weekly YYYYMMDD-YYYYMMDD`  
+  - **タスク:** `[Task] List` または `[Task] Update`  
+  - **ルール:** `[Rules] Update rules.txt` または `[Rules] Approval flow`  
+- 言語はすべて **英語タグ**で統一すること。  
+- 本文はMarkdown形式で出力、必要に応じて添付ファイル（.eml / rules.txt）を加える。  

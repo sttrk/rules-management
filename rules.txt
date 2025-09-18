@@ -5,7 +5,7 @@
   - 学習を開始する。  
   - 「🕐 hh:mm、◯◯を開始しました」と宣言。  
   - `#開始 タスク名` なら、そのタスクを指定して開始。  
-  - 入力時刻は **GitHub Raw URL**（`https://raw.githubusercontent.com/sttrk/jst-feed/main/rules.txt`）から取得し、分単位で記録。  
+  - 入力時刻は **GitHub Raw URL**（`https://raw.githubusercontent.com/sttrk/jst-feed/main/jst.json`）から取得し、分単位で記録。  
   - GitHubから取得できなかった場合は必ずユーザーに報告し、ユーザーが手動で入力した現在時刻を使用する。  
   - 時刻に誤りがあれば「◯時◯分に訂正」と指示すると上書きされる。  
 
@@ -72,7 +72,7 @@
 
 ## 6. 日付と時刻の基準
 - すべての時刻は以下のURLを基準にし、分単位で記録する：  
-  - **GitHub Raw URL** → `https://raw.githubusercontent.com/sttrk/jst-feed/main/rules.txt`  
+  - **GitHub Raw URL** → `https://raw.githubusercontent.com/sttrk/jst-feed/main/jst.json`  
   - GitHubから時刻を取得できなかった場合は、ユーザーの手動入力を基準とする。  
 
 ---
